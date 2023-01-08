@@ -6,9 +6,9 @@ tags: [hello world]
 ---
 ## Summary
 
-The phrase refers to a small demo program, whose purpose is to send the message `"Hello, World!"`. It is often the simplest program one can write in a language, and for this reason is also the first program many will encounter. Though, this is not always true[^1].
+The phrase refers to a small demo program, whose purpose is to send the message `"Hello, World!"`. It is often the simplest program one can write in a language, and for this reason is also the first program many will encounter. Though, this is not always true.[^1]
 
-In spirit, the program demonstrates the syntax of a programming language.  This idea is so universal it extends beyond programming langages[^2].
+In spirit, the program demonstrates the syntax of a programming language. This idea is so universal it extends beyond programming langages.[^2]
 
 ## Examples
 <small></small>
