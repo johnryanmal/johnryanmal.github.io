@@ -162,7 +162,10 @@ defaults:
       permalink: /context/:title/
       tab: context
   
-
+  - scope:
+      path: _layouts
+    values:
+      showtitle: true
   - scope:
       path: _drafts
     values:
