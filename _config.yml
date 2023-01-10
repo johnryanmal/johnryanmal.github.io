@@ -1,5 +1,8 @@
 # The Site Configuration
 
+# debug
+empty: []
+
 # Import the theme
 theme: jekyll-theme-chirpy
 
@@ -145,13 +148,19 @@ defaults:
       # to update the code of all other post links in this project.
       permalink: /posts/:title/
   - scope:
+      path: '_posts/general'
+    values:
+      tab: general
+  - scope:
       path: '_posts/snippets'
     values:
       permalink: /snippets/:title/
+      tab: snippets
   - scope:
       path: '_posts/context'
     values:
       permalink: /context/:title/
+      tab: context
   
 
   - scope:

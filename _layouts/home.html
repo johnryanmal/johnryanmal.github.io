@@ -1,0 +1,5 @@
+---
+layout: page
+---
+{% assign posts = site.posts | where: "tab", "general" %}
+{% include list.html posts=posts %}
