@@ -2,28 +2,40 @@
 title: 'Context: "Hello, World!"'
 date: 2023-01-08 13:14:00 -0800
 categories: [Context, Definition]
-tags: [hello world]
+tags: [hello-world]
 ---
-## Summary
+> "Hello, World!" is symbolic of firsts.
+{: .prompt-info }
 
-The phrase refers to a small demo program, whose purpose is to send the message `"Hello, World!"`. It is often the simplest program one can write in a language, and for this reason is also the first program many will encounter. Though, this is not always true.[^1]
+## Definition
 
-In spirit, the program demonstrates the syntax of a programming language. This idea is so universal it extends beyond programming langages.[^2]
+The phrase refers to a small demo program whose goal is to send the message `"Hello, World!"`. It is often the simplest program one can write in a language, and for this reason is also the first program many will encounter.
+
+<small>
+[(For most languages, anyway.)](https://en.wikipedia.org/wiki/Brainfuck#Hello_World! "Brainfuck is a notable exception.")
+</small>
+
+## Purpose
+
+A Hello World program showcases the minimum syntax necessary to get a working program. Its simplicity makes it ideal for demonstration, especially for people without coding experience.
+
+<small>
+[There are many analogs of this idea across different media.](https://www.ifwiki.org/Cloak_of_Darkness "In the Interactive Fiction community, this takes the form of "Cloak of Darkness"")
+</small>
 
 ## Examples
-<small></small>
 ```javascript
 console.log("Hello, World!")
 ```
-
+---
 ```python
 print("Hello, World!")
 ```
-
+---
 ```rb
 puts "Hello, World!"
 ```
-
+---
 ```java
 public class Main {
     public static void main(String args[]) {
@@ -31,7 +43,7 @@ public class Main {
     }	
 }
 ```
-
+---
 ```c++
 #include <iostream>
 
@@ -40,8 +52,3 @@ int main() {
     return 0;
 }
 ```
-
-## Footnotes
-
-[^1]: Check out [Brainfuck](https://en.wikipedia.org/wiki/Brainfuck#Hello_World!)!
-[^2]: In the Interactive Fiction community, this takes the form of [Cloak of Darkness](https://www.ifwiki.org/Cloak_of_Darkness).
