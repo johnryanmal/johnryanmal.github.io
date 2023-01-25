@@ -1,6 +1,6 @@
 ---
 name: snippets
 layout: snippets
-icon:
+icon: fas fa-code
 order: 2
 ---

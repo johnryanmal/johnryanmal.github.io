@@ -1,6 +1,6 @@
 ---
 name: context
 layout: context
-icon:
+icon: fas fa-code-branch
 order: 1
 ---
