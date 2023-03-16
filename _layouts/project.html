@@ -1,0 +1,9 @@
+---
+layout: fluid
+---
+{% if page.source %}
+	{% assign source = page.source %}
+{% else %}
+	{% assign source = page.name | absolute_url %}
+{% endif %}
+<embed class="border-0 w-100 h-100" src="{{ source }}" />

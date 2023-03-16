@@ -135,6 +135,8 @@ collections:
   tabs:
     output: true
     sort_by: order
+  projects:
+    output: true
 
 defaults:
   - scope:
@@ -161,6 +163,12 @@ defaults:
     values:
       permalink: /context/:title/
       tab: context
+  - scope:
+      path: ''
+      type: projects
+    values:
+      layout: project
+      permalink: /projects/:name/
   
   - scope:
       path: _layouts
