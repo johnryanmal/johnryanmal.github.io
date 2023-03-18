@@ -2,5 +2,5 @@
 name: snippets
 layout: snippets
 icon: fas fa-code
-order: 2
+order: 3
 ---
