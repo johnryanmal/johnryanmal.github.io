@@ -10,3 +10,10 @@ $tab-count: {{ site.tabs | size }}; // plus 1 for home tab
 @import "{{ site.theme }}";
 
 /* append your custom style below */
+
+.project-wrapper {
+	width: 100%;
+	height: calc(100vh - $topbar-height);
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
