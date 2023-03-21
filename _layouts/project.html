@@ -73,7 +73,9 @@ tail_includes:
 		{% assign embed_url = page.name | absolute_url %}
 	{% endif %}
 	<div class="project-wrapper">
-		<embed class="embed-video border" src="{{ embed_url }}" />
+    <div class="project pt-1 pb-1">
+      <embed class="embed-video border " src="{{ embed_url }}" />
+    </div>
 	</div>
 </div>
 
