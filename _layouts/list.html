@@ -1,4 +1,10 @@
-{% assign all = include.posts %}
+---
+layout: page
+showtitle: false
+---
+
+{% assign tab = page.tabname | default: page.name %}
+{% assign all = site.posts | where: "tab", tab %}
 {% assign pinned = all | where: "pin", "true" %}
 {% assign default = all | where_exp: "item", "item.pin != true and item.hidden != true" %}
 {% assign posts = pinned | concat: default %}

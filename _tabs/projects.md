@@ -1,6 +1,6 @@
 ---
 name: projects
-layout: projects
+layout: list
 icon: fas fa-laptop
 order: 2
 ---
