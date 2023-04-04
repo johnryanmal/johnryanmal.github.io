@@ -85,8 +85,17 @@ tail_includes:
     <div class="project-wrapper">
       <div class="project pt-1 pb-1">
         <div class="embed-video border position-relative overflow-hidden">
-          {% if source_url %}
-            {% include github-corner.html href=source_url %}
+          {% if source_url and page.show_repo != false %}
+            {% if page.show_repo != false and page.repo_theme %}
+              {% include github-corner.html href=source_url theme=page.repo_theme %}
+            {% else %}
+              <div class="light">
+                {% include github-corner.html href=source_url theme="light" %}
+              </div>
+              <div class="dark">
+                {% include github-corner.html href=source_url theme="dark" %}
+              </div>
+            {% endif %}
           {% endif %}
           <embed class="embed-video" src="{{ embed_url }}" />
         </div>
