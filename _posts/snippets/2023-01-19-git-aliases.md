@@ -19,12 +19,14 @@ Aliases can be configured using `git config` like so:
 ```shell
 $ git config --global alias.<name> <command>
 ```
+{: .nolineno }
 
 Which allows you to run a git command:
 ```shell
 $ git <name> <args>
 git <command> <args>
 ```
+{: .nolineno }
 
 But if you prefix `<command>` with a `!`, then it runs in the shell directly:
 ```shell
@@ -32,6 +34,7 @@ $ git config --global alias.<name> '!<command>'
 $ git <name> <args>
 <command> <args>
 ```
+{: .nolineno }
 
 And if you also wrap it in a function (e.g. `f`), you can gain full control over the arguments:
 ```shell
@@ -39,3 +42,4 @@ $ git config --global alias.<name> '!f() { <command>; }; f'
 $ git <name> <args>
 f() { <command>; }; f <args>
 ```
+{: .nolineno }

@@ -17,6 +17,7 @@ The output should do the following:
   5. Wait another 2 seconds
   6. Print out “Third task done!”
 ```
+{: file="instructions" }
 ---
 So, I was given this problem a little while ago. It's a deceptively simple problem (for beginners), and I think it gets at core of a common design problem.
 
@@ -54,6 +55,7 @@ setTimeout(firstTask, 2000)
 setTimeout(secondTask, 5000) // modified
 setTimeout(thirdTask, 7000) // ALSO modified!
 ```
+{: .nolineno }
 
 So, no good. What I really needed to do was make each task run _after_ the previous one.
 
@@ -121,6 +123,7 @@ setTimeout(() => { // boilerplate
 	}, 2000)
 }, 2000) 
 ```
+{: .nolineno }
 <small>[This is hell.](http://callbackhell.com/)</small>
 
 From here, it's easy to see the problem. I've got some repetitive code using `setTimeout` that I have to write before every task.
@@ -132,6 +135,7 @@ setTimeout(firstTask, 2000)
 setTimeout(secondTask, 4000)
 setTimeout(thirdTask, 6000)
 ```
+{: .nolineno }
 
 It'd be nice if I could chain these tasks together without all the boilerplate.
 
@@ -165,6 +169,7 @@ setTimeout(() => { // boilerplate
 	}, 2000)
 }, 2000) 
 ```
+{: .nolineno }
 
 2\. Flatten them out, one by one
 
@@ -179,6 +184,7 @@ setTimeout(() => { // boilerplate
 	thirdTask()
 }, 2000)
 ```
+{: .nolineno }
 
 3\. Promise each one you'll have the resolve to call-back
 
@@ -201,6 +207,7 @@ new Promise((resolve, reject) => {
 	}, 2000)
 })
 ```
+{: .nolineno }
 
 4\. Then enjoy your newly cooked call-forward
 
@@ -225,6 +232,7 @@ new Promise((resolve, reject) => {
 	})
 )
 ```
+{: .nolineno }
 
 ---
 ### Refactoring
@@ -248,6 +256,7 @@ setTimeoutPromise(firstTask, 2000)
 .then(() => setTimeoutPromise(secondTask, 2000))
 .then(() => setTimeoutPromise(thirdTask, 2000))
 ```
+{: .nolineno }
 
 Modifying `secondTask` is easy:
 ```js
@@ -255,6 +264,7 @@ setTimeoutPromise(firstTask, 2000)
 .then(() => setTimeoutPromise(secondTask, 3000)) // modified
 .then(() => setTimeoutPromise(thirdTask, 2000))
 ```
+{: .nolineno }
 
 And adding `fourthTask` is too:
 ```js
@@ -263,6 +273,7 @@ setTimeoutPromise(firstTask, 2000)
 .then(() => setTimeoutPromise(thirdTask, 2000))
 .then(() => setTimeoutPromise(fourthTask, 2000)) // modified
 ```
+{: .nolineno }
 
 ## The Solution
 
