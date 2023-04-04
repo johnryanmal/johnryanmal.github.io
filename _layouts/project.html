@@ -66,17 +66,37 @@ tail_includes:
 
 </div> <!-- .post-meta -->
 
+{% if page.embed %}
+  {% assign embed_url = page.embed %}
+{% else %}
+  {% assign embed_url = page.repo | absolute_url %}
+{% endif %}
+
+{% if page.source %}
+  {% assign source_url = page.source %}
+{% elsif page.repo %}
+  {% capture source_url %}
+    https://github.com/{{ site.github.username }}/{{ page.repo }}
+  {% endcapture %}
+{% endif %}
+
 <div class="post-content">
-  {% if page.source %}
-		{% assign embed_url = page.embed %}
-	{% else %}
-		{% assign embed_url = page.name | absolute_url %}
-	{% endif %}
-	<div class="project-wrapper">
-    <div class="project pt-1 pb-1">
-      <embed class="embed-video border" src="{{ embed_url }}" />
+  {% if embed_url %}
+    <div class="project-wrapper">
+      <div class="project pt-1 pb-1">
+        <div class="embed-video border position-relative overflow-hidden">
+          {% if source_url %}
+            {% include github-corner.html href=source_url %}
+          {% endif %}
+          <embed class="embed-video" src="{{ embed_url }}" />
+        </div>
+      </div>
     </div>
-	</div>
+  {% else %}
+    <blockquote class="prompt-danger">
+      Missing project.
+    </blockquote>
+  {% endif %}
 </div>
 
 <div class="post-content">
